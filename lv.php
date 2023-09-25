@@ -40,7 +40,7 @@ for ($i=0; $i <1000 ; $i++) {
                 echo  color('red',"[" . date("H:i:s") . "] ")."ID : gagal dibuat\n";
 
             }
-            sleep(4);
+            sleep(10);
             genap:
             $addcarts = curl("https://api.im2017.com/api/cart/add",'{"productId":"35","cartType":"Custom","cartNum":1,"new":1,"uniqueId":""}',$token);
             $responens = json_decode($addcarts);
@@ -62,7 +62,7 @@ for ($i=0; $i <1000 ; $i++) {
                 echo  color('red',"[" . date("H:i:s") . "] ")."ID : gagal dibuat\n";
 
             }
-            sleep(4);
+            sleep(20);
             gena:
             $addcarts = curl("https://api.im2017.com/api/cart/add",'{"productId":"35","cartType":"Custom","cartNum":1,"new":1,"uniqueId":""}',$token);
             $responens = json_decode($addcarts);
@@ -92,7 +92,7 @@ for ($i=0; $i <1000 ; $i++) {
             ulang:
             $timeopentombok = $parsing[1];
             if($timeopentombok == date("H:i:s")){
-                sleep(8);
+                sleep(15);
                 $listtrxs = curl("https://api.im2017.com/api/order/list?page=1&limit=20&type=1",null,$token);
                 $response = json_decode($listtrxs);
                 foreach ($response->data as $key){
