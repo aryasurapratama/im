@@ -3,7 +3,7 @@ date_default_timezone_set("Asia/Jakarta");
 require('./helper/app.php');
 echo color('green',"[" . date("H:i:s") . "] ")."Input File example (token.txt) : ";
 $file = trim(fgets(STDIN));
-for ($i=0; $i <26 ; $i++) { 
+for ($i=0; $i <2600 ; $i++) { 
     echo"\n";
     $list = explode("\n", str_replace("\r", "", file_get_contents($file)));
     foreach ($list as $key => $token) {
