@@ -40,7 +40,7 @@ for ($i=0; $i <1000 ; $i++) {
                 echo  color('red',"[" . date("H:i:s") . "] ")."ID : gagal dibuat\n";
 
             }
-            sleep(10);
+            sleep(15);
             genap:
             $addcarts = curl("https://api.im2019.com/api/cart/add",'{"productId":"35","cartType":"Custom","cartNum":1,"new":1,"uniqueId":""}',$token);
             $responens = json_decode($addcarts);
@@ -62,7 +62,7 @@ for ($i=0; $i <1000 ; $i++) {
                 echo  color('red',"[" . date("H:i:s") . "] ")."ID : gagal dibuat\n";
 
             }
-            sleep(20);
+            sleep(25);
             ganji:
             $addcart = curl("https://api.im2019.com/api/cart/add",'{"productId":"35","cartType":"Custom","cartNum":1,"new":1,"uniqueId":""}',$token);
             if(strpos($addcart,'"ok"')){
@@ -92,7 +92,7 @@ for ($i=0; $i <1000 ; $i++) {
             ulang:
             $timeopentombok = $parsing[1];
             if($timeopentombok == date("H:i:s")){
-                sleep(15);
+                sleep(20);
                 $listtrxs = curl("https://api.im2019.com/api/order/list?page=1&limit=20&type=1",null,$token);
                 $response = json_decode($listtrxs);
                 foreach ($response->data as $key){
@@ -109,7 +109,7 @@ for ($i=0; $i <1000 ; $i++) {
 
                     
                     }
-                    sleep(15);
+                    sleep(20);
                 }
                 else{
                     // echo "Belum ditemukan \n";
